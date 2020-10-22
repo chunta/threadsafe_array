@@ -15,6 +15,8 @@
 		185C37692541BA29009E2651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185C37672541BA29009E2651 /* LaunchScreen.storyboard */; };
 		185C376C2541BA29009E2651 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 185C376B2541BA29009E2651 /* main.m */; };
 		185C37762541BA29009E2651 /* TSArraySampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 185C37752541BA29009E2651 /* TSArraySampleTests.m */; };
+		185C37852541C8D6009E2651 /* TSMArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 185C37842541C8D6009E2651 /* TSMArray.m */; };
+		185C37882541CD06009E2651 /* STArrayEx.m in Sources */ = {isa = PBXBuildFile; fileRef = 185C37872541CD06009E2651 /* STArrayEx.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		185C37712541BA29009E2651 /* TSArraySampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TSArraySampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		185C37752541BA29009E2651 /* TSArraySampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSArraySampleTests.m; sourceTree = "<group>"; };
 		185C37772541BA29009E2651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185C37832541C8D6009E2651 /* TSMArray.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSMArray.h; sourceTree = "<group>"; };
+		185C37842541C8D6009E2651 /* TSMArray.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSMArray.m; sourceTree = "<group>"; };
+		185C37862541CD06009E2651 /* STArrayEx.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STArrayEx.h; sourceTree = "<group>"; };
+		185C37872541CD06009E2651 /* STArrayEx.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STArrayEx.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,10 @@
 				185C37672541BA29009E2651 /* LaunchScreen.storyboard */,
 				185C376A2541BA29009E2651 /* Info.plist */,
 				185C376B2541BA29009E2651 /* main.m */,
+				185C37832541C8D6009E2651 /* TSMArray.h */,
+				185C37842541C8D6009E2651 /* TSMArray.m */,
+				185C37862541CD06009E2651 /* STArrayEx.h */,
+				185C37872541CD06009E2651 /* STArrayEx.m */,
 			);
 			path = TSArraySample;
 			sourceTree = "<group>";
@@ -211,7 +221,9 @@
 				185C37612541BA28009E2651 /* ViewController.m in Sources */,
 				185C375B2541BA28009E2651 /* AppDelegate.m in Sources */,
 				185C376C2541BA29009E2651 /* main.m in Sources */,
+				185C37882541CD06009E2651 /* STArrayEx.m in Sources */,
 				185C375E2541BA28009E2651 /* SceneDelegate.m in Sources */,
+				185C37852541C8D6009E2651 /* TSMArray.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

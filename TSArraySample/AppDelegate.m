@@ -7,16 +7,54 @@
 //
 
 #import "AppDelegate.h"
+#import "TSMArray.h"
+#import "STArrayEx.h"
 
 @interface AppDelegate ()
-
+{
+    TSMArray *tsArray;
+    STArrayEx * exArray;
+    NSThread *ta;
+    NSThread *tb;
+}
 @end
 
 @implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+
+    tsArray = [TSMArray new];
+    exArray = [STArrayEx new];
+    ta = [[NSThread alloc] initWithBlock:^{
+        while (1) {
+            for (int i = 0; i < 100; i++) {
+                NSLog(@"add");
+                [self->tsArray operation:0 data:[NSNumber numberWithInt:i]];
+            }
+            for (int i = 0; i < 100; i++) {
+                NSLog(@"add ex");
+                [self->exArray add:[NSNumber numberWithInt:i]];
+            }
+        }
+    }];
+    
+    tb = [[NSThread alloc] initWithBlock:^{
+        while (1) {
+            for (int i = 0; i < 100; i++) {
+                NSLog(@"remove");
+                [self->tsArray operation:1 data:[NSNumber numberWithInt:i]];
+            }
+            for (int i = 0; i < 100; i++) {
+                NSLog(@"remove ex");
+                [self->exArray remove:[NSNumber numberWithInt:i]];
+            }
+        }
+    }];
+    
+    [ta start];
+    [tb start];
+    
     return YES;
 }
 
